@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import {Helmet} from 'react-helmet';
 
 class Users extends React.Component {
   constructor(props) {
@@ -102,6 +103,9 @@ class Users extends React.Component {
       button = null;
     }
     return [
+      <Helmet>
+        <title>Photo Album</title>
+      </Helmet>,
       <div className="header">{header}</div>,
       <div className="users">
         {
